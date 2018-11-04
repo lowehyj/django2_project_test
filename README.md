@@ -1,0 +1,1 @@
+# django2_project_test

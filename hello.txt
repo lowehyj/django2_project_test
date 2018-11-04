@@ -1,4 +1,7 @@
 hello
+<<<<<<< HEAD
 qweqwe
+=======
+>>>>>>> f52fae42ce3e1c4b4e69bf1a8c1ed8de625cd4a6
 123
 

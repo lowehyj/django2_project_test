@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css 选择器</title>
+	<style type="text/css">
+		div{
+			color:red;
+		}
+		#box{
+			color:green;
+		}
+
+
+		.red{
+			color:red;
+		}
+		.blue{
+			color:blue;
+		}
+
+		.bold{
+			font-weight:bold;
+		}
+
+		.yahei{
+			font-family:'Microsoft Yahei';
+		}
+
+		
+		.duanluo{
+			text-indent:28px;
+			font-size:20px;
+		}
+
+		.duanluo em{
+			font-style:normal;
+			color:pink;
+		}
+
+		.list{
+			list-style:none;
+		}
+
+		.list li{
+			height:30px;
+		}
+
+		.list li a{
+			text-decoration:none;
+			font-family:'Microsoft Yahei';
+			font-size:14px;
+		}
+
+		.list li a:hover{
+			color:gold;
+			text-decoration:underline;
+		}
+		
+		.box01,.box02,.box03{
+			text-indent:28px;
+			width:1000px;
+			height:80px;
+			font-size:50px;
+		}
+
+		.box01{
+			color:blue;
+		}
+
+		.box02{
+			color:red;
+		}
+
+		.box03{
+			color:gold;
+		}
+	</style>
+</head>
+<body>
+	<a href="http://www.baidu.com">百度网</a>
+	<div class="red">
+		HTML是 HyperText Mark-up Language 的首字母简写，意思是超文本标记语言，超文本指的是超链接，标记指的是标签，是一种用来制作网页的语言，这种语言由一个个的标签组成，用这种语言制作的文件保存的是一个文本文件，文件的扩展名为html或者htm，一个html文件就是一个网页，html文件用编辑器打开显示的是文本，可以用文本的方式编辑它，如果用浏览器打开，浏览器会按照标签描述内容将文件渲染成网页，显示的网页可以从一个网页链接跳转到另外一个网页。
+	</div>
+	<div class="blue bold">这个是第二个div</div>
+	<div class="red yahei">这个是第三个div</div>
+
+	<P class="duanluo yahei">
+		HTML是 <em>HyperText Mark-up Language</em> 的首字母简写，意思是超文本标记语言，超文本指的是超链接，标记指的是标签，是一种用来制作网页的语言，这种语言由一个个的标签组成，用这种语言制作的文件保存的是一个文本文件，文件的扩展名为html或者htm，一个html文件就是一个网页，html文件用编辑器打开显示的是文本，可以用文本的方式编辑它，如果用浏览器打开，浏览器会按照标签描述内容将文件渲染成网页，显示的网页可以从一个网页链接跳转到另外一个网页。
+	</P>
+
+	<P>
+		HTML是 <em>HyperText Mark-up Language</em> 的首字母简写，意思是超文本标记语言，超文本指的是超链接，标记指的是标签，是一种用来制作网页的语言，这种语言由一个个的标签组成，用这种语言制作的文件保存的是一个文本文件，文件的扩展名为html或者htm，一个html文件就是一个网页，html文件用编辑器打开显示的是文本，可以用文本的方式编辑它，如果用浏览器打开，浏览器会按照标签描述内容将文件渲染成网页，显示的网页可以从一个网页链接跳转到另外一个网页。
+	</P>
+
+	<ul class="list">
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+	</ul>
+
+	<div class="box01">组选择器</div>
+	<div class="box02">组选择器</div>
+	<div class="box03">组选择器</div>
+</body>
+</html>

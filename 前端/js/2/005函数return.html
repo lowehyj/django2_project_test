@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oInput01 = document.getElementById('input01');
+			var oInput02 = document.getElementById('input02');
+			var oBtn01 = document.getElementById('btn01');
+
+			function add(a,b){
+				var c = parseInt(a) + parseInt(b);
+				return c;
+			}
+
+			oBtn01.onclick = function(){
+				var val01 = oInput01.value;
+				var val02 = oInput02.value;
+
+				var rs = add(val01,val02);
+				alert(rs);
+			}
+			
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="input01">
+	<input type="text" name="" id="input02">
+	<input type="button" name="" value="相加" id="btn01">
+</body>
+</html>

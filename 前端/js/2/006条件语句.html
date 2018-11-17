@@ -23,13 +23,13 @@
 			var oDiv01 = document.getElementById('box01');
 
 			oBtn01.onclick = function(){
-				if (oDiv01.style.display=='none')
+				if (oDiv01.style.display=='block' || oDiv01.style.display=='')
 				{
-					oDiv01.style.display = 'block';
+					oDiv01.style.display = 'none';
 				}
 				else 
 				{
-					oDiv01.style.display = 'none';
+					oDiv01.style.display = 'block';
 				}
 			}
 

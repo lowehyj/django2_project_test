@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组去重</title>
+	<script type="text/javascript">
+		var aList01 = [1,22,3,'af',3,44,2,3,4,4,8,55,8,3];
+
+		var aList02 = [];
+
+		for(var i=0;i<aList01.length;i++)
+		{
+			if(aList01.indexOf(aList01[i])==i)
+			{
+				aList02.push(aList01[i])
+			}
+		}
+
+		alert(aList02);
+
+
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

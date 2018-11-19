@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oDiv = document.getElementById('div1');
+			function timeleft(){
+				// 实际开发中此时间从服务器获取;
+				var now = new Date();
+				var future = new Date(2018,10,19,21,26,30);
+				var lefts = parseInt((future-now)/1000);
+				var day = parseInt(lefts/86400);
+				var hour = parseInt((lefts%86400)/3600);
+				var min = parseInt((lefts%86400)%3600/60);
+				var sec = lefts%60;
+
+				if(lefts<=0)
+				{
+					window.location.href='http://www.baidu.com';
+				}
+
+				str = '距离2018年12月10日晚24点还剩下:'+todou(day)+'天'+todou(hour)+'时'+todou(min)+'分'+todou(sec)+'秒';
+				oDiv.innerHTML = str;
+			}
+			timeleft();
+			setInterval(timeleft,1000);
+		}
+	
+		function todou(num){
+			if(num<10){
+				return '0'+num;
+			}
+			else{
+				return num;
+			}
+		}
+
+
+
+
+	</script>
+</head>
+<body>
+	<div class="" id="div1"></div>
+</body>
+</html>

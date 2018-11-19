@@ -8,30 +8,30 @@
 		window.onload = function(){
 
 			var oPop = document.getElementById('pop');
+			var oShut = document.getElementById('shutoff');
+			// setTimeout(showpop,4000);/*通过定时器来显示弹框*/
 
-			setTimeout(showpop,4000);
+			// function showpop(){
+			// 	oPop.style.display = 'block';/*设置display属性为显示*/
+			// }
 
-			function showpop(){
+			setTimeout(function(){
+				oPop.style.display = 'block';/*设置display属性为显示*/
+			},3000);
 
-				oPop.style.display = 'block';
-			
+
+			oShut.onclick = function(){
+				oPop.style.display = 'none';
 			}
-
 		
 		} 
 		
-		// setTimeout(myalert,3000);
-
-		function myalert(){
-
-			alert('hello!');
-
-		}
+		
 	</script>
 
 	<style type="text/css">
 		.pop_con{
-			display:none;
+			display:none;/*设置默认弹框隐藏*/
 		}
 
 
@@ -40,12 +40,12 @@
 			height:300px;
 			background-color:#fff;
 			border:1px solid #000;
-			position:fixed;
-			left:50%;
+			position:fixed;/*相对浏览器窗口位置固定*/
+			left:50%;/*左上角移动到中间位置*/
 			top:50%;
-			margin-left:-200px;
+			margin-left:-200px;/*把窗口居中*/
 			margin-top:-150px;
-			z-index:9999;
+			z-index:9999;/*定位元素是浮动的正常的文档流之上，可以用z-index属性来设置元素的层级*/
 
 
 		}
@@ -58,7 +58,8 @@
 			left:0;
 			top:0;
 			opacity:0.3;
-			filter:alpha(opacity=30);
+			filter:alpha(opacity=30);/*兼容IE*/
+
 			z-index:9990;
 		}
 
@@ -71,7 +72,8 @@
 
 	<div class="pop_con" id="pop">
 		<div class="pop">
-			<h1>提示信息!</h1>			
+			<h3>提示信息!</h3>
+			<a href="#" id="shutoff">关闭</a>			
 		</div>
 		<div class="mask"></div>
 	</div>

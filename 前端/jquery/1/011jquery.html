@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		// alert($);
+
+		window.onload = function(){
+			var oDiv = document.getElementById('div1');
+			alert(oDiv.innerHTML);
+
+		}
+
+		$(document).ready(function(){
+
+			var $div1 = $('#div1');
+			alert($div1.html()+'jquery');
+
+		})
+
+
+
+	</script>
+</head>
+<body>
+	<div id="div1">这是一个div元素</div>
+</body>
+</html>

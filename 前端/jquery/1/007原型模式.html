@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型模式</title>
+	<script type="text/javascript">
+		function Person(name,age,job){
+			this.name = name;
+			this.age = age;
+			this.job = job;
+		}
+
+		Person.prototype.showname = function(){
+			alert(this.name);
+		}
+
+		Person.prototype.showname = function(){
+			alert(this.name);
+		}
+
+		Person.prototype.showjob = function(){
+			alert(this.job);
+		}
+
+		var Tom = new Person('Tom',18,'engineer');
+		var Jack = new Person('Jack',19,'worker');
+		// Tom.shownjob();
+		alert(Tom.showname==Jack.showname); 
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

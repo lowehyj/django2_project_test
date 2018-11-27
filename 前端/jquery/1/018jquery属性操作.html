@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery属性操作</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			alert($('.box').html());
+
+			$('.box').html('<a href="http://www.baidu.com">百度网</a>');//设置html内容
+
+			$('.box').attr({title:'这是一个div！'});//设置attr属性
+
+			alert($('.box').attr('class'));//读取attr属性
+
+			alert($('#check').prop('checked'));//读写checked的状态用prop方法，不能用attr读取
+
+			$('#check').prop({checked:true});
+
+			alert($('.box2').text());//会弹出文本，不带标签
+
+
+
+
+		});
+
+
+
+
+	</script>
+</head>
+<body>
+	<div class="box">这是一个div元素</div>
+
+	<input type="checkbox" name="" id="check">多选
+
+	<div class="box2"><span>这是div元素内的span</span></div>
+</body>
+</html>

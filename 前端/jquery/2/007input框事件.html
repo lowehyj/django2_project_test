@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$('#txt01').focus();
+
+			$('#txt01').focus(function() {
+				// alert('focus');
+			});
+
+			$('#txt01').blur(function() {
+				alert('blur');
+			});
+
+			$('#txt01').change(function() {
+				alert('change');
+			});
+
+
+			$('#txt01').keyup(function() {
+				alert('keyup');
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="txt01">
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+       $(function(){
+
+       		$('#txt01').keyup(function(){
+
+       			var val = $(this).val();
+
+       			$.ajax({
+
+					url: 'http://suggestion.baidu.com/su?',
+					type: 'get',
+					dataType: 'jsonp',
+					data: {wd : val},
+					jsonp:'cb' /*百度接口的回调函数就是 cb*/
+
+				})
+				.done(function(result) {
+
+					$('.list').empty();
+
+					for(var i=0;i<result.s.length;i++){
+						var $li = $('<li>'+ result.s[i] +'</li>');
+
+						$li.prependTo('.list');
+					}
+
+				})
+				.fail(function() {
+					console.log("error");
+				})
+			})
+		})
+
+
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="txt01">
+	<ul class="list"></ul>
+</body>
+</html>

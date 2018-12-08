@@ -17,7 +17,7 @@
 			});	
 			*/
 
-
+			/*
 			$('#div1').mouseenter(function(){
 				$(this).stop().animate({marginTop:50});
 			});
@@ -25,6 +25,14 @@
 			$('#div1').mouseleave(function(){
 				$(this).stop().animate({marginTop:100});
 			});	
+
+			*/
+
+			$('#div1').hover(function(){
+				$(this).stop().animate({marginTop:50});
+			},function(){
+				$(this).stop().animate({marginTop:100});
+			});
 
 
 		});

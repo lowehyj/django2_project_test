@@ -77,7 +77,7 @@
 			});
 			*/
 			/*$('.level1').click(function(){
-				$(this).next().slideToggle();
+				$(this).next().stop().slideToggle();  加上stop()修正反复点击导致的bug
 			});*/
 
 			$('.level1').click(function(){
